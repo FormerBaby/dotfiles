@@ -1,0 +1,63 @@
+# Conky settings #
+background yes
+update_interval 1
+double_buffer yes
+no_buffers yes
+imlib_cache_size 10
+double_buffer true
+no_buffers true
+
+# Window specifications #
+gap_x 0
+gap_y 0
+maximum_width 2800
+alignment top_middle
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes 
+own_window_argb_value 255
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
+border_inner_margin 0
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+default_shade_color AAAAAA
+draw_outline no
+default_outline_color AAAAAA
+draw_borders no
+draw_graph_borders no
+default_graph_size 26 80
+show_graph_scale no
+show_graph_range no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Mono:size=10
+text_buffer_size 2048
+override_utf8_locale yes
+
+# Useful shortenings #
+short_units yes
+pad_percents  2
+top_name_width 30
+
+# Color scheme #
+default_color FFFFFF
+color1 FF22CC
+color2 FF22CC
+color3 FF22CC
+color4 FF22CC
+color5 FF22CC
+color6 FF22CC
+color7 FF22CC
+color8 FF22CC
+
+TEXT
+# Cpu, memory and disk IO
+${voffset 40}
+${goto 40}${color 666}CPU 0:${offset 165}CPU 1:${offset 165}CPU 2:${offset 165}CPU 3:${offset 165}RAM:${offset 165}DISK I/O:${offset 165}NET_UP:${offset 165}NET_DOWN:
+${voffset 20}${offset 40}${cpugraph cpu0 26,190 222222 DD00AA -l}${offset 20}${cpugraph cpu1 26,190 222222 DD00AA -l}${offset 20}${cpugraph cpu2 26,190 222222 DD00AA -l}${offset 20}${cpugraph cpu3 26,190 222222 DD00AA -l}${offset 20}${memgraph 26,190 22222 5500FF -l}${offset 20}${diskiograph 26,190 222222 AACCAA -l}${offset 20}${upspeedgraph wlp3s0 26,190 222222 BB7722}${offset 20}${downspeedgraph wlp3s0 26,190 222222 BB7722}
+
